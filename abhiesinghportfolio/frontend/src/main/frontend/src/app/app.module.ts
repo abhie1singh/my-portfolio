@@ -7,12 +7,22 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { Routing } from './app.routing';
+import { MenuComponent } from './menu/menu.component';
+import { LandPageComponent } from './landpage/landpage.component';
+import { IntroComponent } from './intro/intro.component';
+import { MyWorkComponent } from './mywork/mywork.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    MenuComponent,
+    LandPageComponent,
+    IntroComponent,
+    MyWorkComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
