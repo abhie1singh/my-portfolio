@@ -21,7 +21,7 @@
                 <i class="ion-ios7-browsers"></i>
                 <h3>Web Development</h3>
             </div>
-            
+
             <div class="col-sm-2">
                 <i class="ion-ios7-people"></i>
                 <h3>Agile/SCRUM Methodologies</h3>
@@ -29,7 +29,7 @@
             <!--/col-md-4-->
             <!--/col-md-4-->
             <!--/col-md-4-->
-             <div class="col-sm-2">
+            <div class="col-sm-2">
                 <i class="ion-document-text"></i>
                 <h3>Comp. Sci. Graduate</h3>
             </div>
@@ -54,7 +54,7 @@
 
 <div class="container ptb">
     <div class="row">
-        <h2 class="centered mb">I craft handsome sites & stunning apps<br/>that empower your startup.</h2>
+        <h2 class="centered mb">I develop beautiful websites & stable middleware<br/>that empower your Organization.</h2>
         <div class="col-md-6">
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                 standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
@@ -420,6 +420,11 @@
 
         $(window).on('resize', function () {
             setPortfolio();
+        });
+
+        $("#sidebar-wrapper").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
         });
     })(jQuery);
 

@@ -1,8 +1,33 @@
-
-
-<div class="container">
-  <div class="row">
-    <!-- routing here -->
-    <router-outlet></router-outlet>
+<div id="wrapper">
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#">Abhie Singh</a>
+      </li>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">Short Resume</a>
+      </li>
+      <li>
+        <a href="#">Detailed Resume</a>
+      </li>
+      <li>
+        <a href="#">Projects</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- routing here -->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
   </div>
 </div>
