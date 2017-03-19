@@ -12,6 +12,7 @@ import { LandPageComponent } from './landpage/landpage.component';
 import { IntroComponent } from './intro/intro.component';
 import { MyWorkComponent } from './mywork/mywork.component';
 import { FooterComponent } from './footer/footer.component';
+import { EducationComponent } from './education/education.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     LandPageComponent,
     IntroComponent,
     MyWorkComponent,
-    FooterComponent
+    FooterComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,
