@@ -1,12 +1,42 @@
-(function($) {
+(function ($) {
 
-// prettyPhoto
-	jQuery(document).ready(function(){
-		jQuery('a[data-gal]').each(function() {
-			jQuery(this).attr('rel', jQuery(this).data('gal'));
-		});  	
-		jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({animationSpeed:'slow',theme:'light_square',slideshow:false,overlay_gallery: false,social_tools:false,deeplinking:false});
-	}); 
+	// prettyPhoto
+	jQuery(document).ready(function () {
+		// URL of PDF document
+		var url = "../../app/resumes/ShortResumeAbhie.pdf";
 
-		
+		// Asynchronous download PDF
+		PDFJS.getDocument(url)
+			.then(function (pdf) {
+				return pdf.getPage(1);
+			})
+			.then(function (page) {
+				// Set scale (zoom) level
+				var scale = 1.5;
+
+				// Get viewport (dimensions)
+				var viewport = page.getViewport(scale);
+
+				// Get canvas#the-canvas
+				var canvas = document.getElementById('the-canvas');
+
+				// Fetch canvas' 2d context
+				var context = canvas.getContext('2d');
+
+				// Set dimensions to Canvas
+				canvas.height = viewport.height;
+				canvas.width = viewport.width;
+
+				// Prepare object needed by render method
+				var renderContext = {
+					canvasContext: context,
+					viewport: viewport
+				};
+
+				// Render PDF page
+				page.render(renderContext);
+			});
+	});
+
+
 })(jQuery);

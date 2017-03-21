@@ -513,3 +513,27 @@ input {
 .showMore {
 	margin-top: -40px;
 }
+
+.menuButton {
+	font-size : 50px;
+	cursor : pointer;
+	margin-top: -80px;
+}
+
+.headerText {
+	margin-left: 70px;
+}
+
+.affix {
+      top:0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+  .navbar {
+      margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+     position: relative;
+     top: 50px;
+  }

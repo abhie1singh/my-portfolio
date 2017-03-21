@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { TabsModule } from 'ng2-bootstrap';
 
+import { PdfViewerComponent } from 'ng2-pdf-viewer';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -13,6 +15,9 @@ import { IntroComponent } from './intro/intro.component';
 import { MyWorkComponent } from './mywork/mywork.component';
 import { FooterComponent } from './footer/footer.component';
 import { EducationComponent } from './education/education.component';
+import { ResumeComponent } from './resumes/resume.component';
+import { ShortResumeComponent } from './resumes/shortresume.component';
+import { DetailResumeComponent } from './resumes/detailresume.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +29,18 @@ import { EducationComponent } from './education/education.component';
     IntroComponent,
     MyWorkComponent,
     FooterComponent,
-    EducationComponent
+    EducationComponent,
+    ResumeComponent,
+    PdfViewerComponent,
+    ShortResumeComponent,
+    DetailResumeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    Routing
+    Routing,
+    TabsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
